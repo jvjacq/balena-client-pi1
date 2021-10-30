@@ -87,18 +87,17 @@ def main():
             quit()
     #====================================================================
 
-
 def sample_thread():
     #Thread method to sample values and send data over TCP repetitively
     while(True):
-        #Wait for 10s     
-        time.sleep(rate)
-
         lgt = chan.value
-        tmp = "{0:<4.2f}".format(round(chan1.voltage*100))
+        tmp = round(chan1.voltage*100)
         #Send sampled values if flag enabled (sensor 'on')
         if(send_flag):
             senddata(lgt,tmp)
+        
+        #Wait for 10s     
+        time.sleep(rate)
         
 #SENDING=================================================================
 #Send state of send_flag variable (sensor status) and time of last sample

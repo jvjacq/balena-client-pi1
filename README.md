@@ -1,4 +1,4 @@
-##This repository contains a the tools to build a balena container designed to run on a Raspberry Pi Zero W.
+## This repository contains a the tools to build a balena container designed to run on a Raspberry Pi Zero W.
 
 This project is designed to buld a Sensor-client device, running the Pi1.py file on a raspberry Pi connected to an MCP3008 ADC, which is in turn converting readings from a tempreature and light sensor. This device acts as a client in a Server-client architecure, connecting to a second 'Server' device, running a Python Flask server, also inside a Balena container. The sensor samples collected by this device are sent using Python TCP sockets.
 
